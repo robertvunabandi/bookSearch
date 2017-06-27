@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.codepath.android.booksearch.R;
@@ -16,12 +17,13 @@ import com.codepath.android.booksearch.models.Book;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
+public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>  {
     private List<Book> mBooks;
     private Context mContext;
 
+
     // View lookup cache
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public ImageView ivCover;
         public TextView tvTitle;
         public TextView tvAuthor;
@@ -34,8 +36,20 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
             ivCover = (ImageView)itemView.findViewById(R.id.ivBookCover);
             tvTitle = (TextView)itemView.findViewById(R.id.tvTitle);
             tvAuthor = (TextView)itemView.findViewById(R.id.tvAuthor);
+
+        }
+
+        @Override
+        public void onClick(View v) {
+            int position = getAdapterPosition(); // gets item position
+            if (position != RecyclerView.NO_POSITION) {
+                Book book = mBooks.get(position);
+                Toast.makeText(mContext, tvTitle.getText(), Toast.LENGTH_SHORT).show();
+            }
+
         }
     }
+
 
     public BookAdapter(Context context, ArrayList<Book> aBooks) {
         mBooks = aBooks;
