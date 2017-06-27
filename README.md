@@ -1,6 +1,10 @@
-# Book Search App
 
-[FORM Gsionffdks](https://github.com/codepath/android-booksearch-exercise)
+
+App created from this [ORIGINAL GITHUB](https://github.com/codepath/android-booksearch-exercise) project. 
+
+Collaborators: Robert Vunabandi, and Bruce Gatete.
+
+# Book Search App
 
 Android app that leverages the [OpenLibrary API](https://openlibrary.org/developers/api) to search books and display cover images. This app is to be used as the base app for adding suggested extensions.
 
