@@ -2,7 +2,7 @@
 
 App created from this [ORIGINAL GITHUB](https://github.com/codepath/android-booksearch-exercise) project. 
 
-Collaborators: Robert Vunabandi, and Bruce Gatete.
+Collaborators: **Robert Vunabandi**, and **Bruce Gatete**.
 
 # Book Search App
 
